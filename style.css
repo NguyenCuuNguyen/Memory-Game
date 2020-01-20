@@ -1,0 +1,65 @@
+/*Creating a flex grid with cards each of which is 150-150px*/
+*,
+*::before /*pseudo-element to add cosmetic content to an element with content property*/
+*::after{
+  box-sizing: border-box; /*CONVENIENT (doens't have to do math) includes the padding and border in element's total width + height*/
+}
+
+body{
+  margin: 20px 0;
+  background: #6589F9;
+}
+
+.grid{
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex; /*Flexbox*/
+  flex-wrap: wrap; /*not display on one line*/
+  justify-content: space-evenly; /**/
+}
+
+.card{ /*background = image for each card*/
+  margin: 5px;
+  position: relative; /*relative to itself, if moved then nothing is affected */
+  transition: all .4s linear; /*1)property 2)duration default = 0 if not specified 3)speed curve: same speed*/
+  transform-style: preserve-3d; /*cards flipped in 3D*/
+
+  /*background-size: contain;
+  background-repeat: no-repeat; /*background image repeated till cover
+  background-position: center center;
+  */
+}
+.card,
+.back,
+.front {
+  height: 150px;
+  width: 150px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front{
+  z-index: 2;/*stack level of cards*/
+  background: #FAB942 url('../img/question.gif') no-repeat center center / contain; /*no repeated background img till covered*/
+}
+
+.back{
+  transform: rotateY(180deg);
+  background-color: #6589F9;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected{
+  transform: rotateY(180deg);
+}
+
+/*remove background, not dom to reserve the spacing*/
+.match .front{
+  background-image: #6589F9 !important; /*this property overrides others*/
+}
