@@ -1,0 +1,35 @@
+body {
+  background: url("./background.jpg");
+  background-size: cover;
+  font-family: 'IBM Plex Mono', monospace;
+  color:#C06C84;
+  text-align: center;
+  
+}
+
+#errors{
+  text-align: left;
+}
+
+#board {
+  height: 895px;
+  width: 975px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #C06C84;
+  border: 10px solid #6C5B7B;
+  
+}
+
+#heading{
+  color: #355C7D  !important;
+  text-align: center !important; 
+  font-weight: bold;
+  font-size:95px;
+}
+.card {
+  height: 218px;
+  width: 190px;
+  margin: 2.5px;
+}
