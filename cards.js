@@ -23,32 +23,22 @@ var cardSet = [
     "./img/_tradition"
 ]
 
-// var cardList = [
-//     "darkness",
-//     "double",
-//     "fairy",
-//     "fighting",
-//     "fire",
-//     "grass",
-//     "lightning",
-//     "metal",
-//     "psychic",
-//     "water"
-// ]
-
-
 var cardSet;
 var board = [];
 var rows = 4;
 var columns =5;
-
+var remainCards = cardSet.length
 var card1Selected;
 var card2Selected;
+
 
 window.onload = function() {
     shuffleCards();
     startGame();
 }
+
+
+
 
 function shuffleCards() {
     //cardSet = cardList.concat(cardList); //two of each card
@@ -129,7 +119,6 @@ function selectCard() {
 }
 
 function update() {
-    //if cards aren't the same, flip both back
     //figure out if name match:
     console.log("card1Selected.src is: ", card1Selected.src);
     console.log("card2Selected.src is: ", card2Selected.src);
@@ -140,15 +129,47 @@ function update() {
         card1 = card1Selected.src.split("/")[4]
         card2 = card2Selected.src.split("_")[1]
     }
-    console.log("card1:", card1)
-    console.log("card2:", card2)
+
+    //if cards aren't the same, flip both back
     if (card1 != card2) {
         card1Selected.src = "front.png";
         card2Selected.src = "front.png";
         errors += 1;
         document.getElementById("errors").innerText = errors;
+    }else{
+        remainCards -= 2;
+        console.log("remainCards ", remainCards)
+        if (remainCards === 0) {
+            nextLevel()
+        }
     }
-
     card1Selected = null;
     card2Selected = null;
 }
+
+
+
+function nextLevel(){
+    // var myBtn=document.getElementById("nextLevel");
+    //popup is now a div, id=nextLevel
+    console.log()
+    var popup = document.getElementsByClassName("finishPopup")[0];
+    console.log("popup", popup);
+    popup.style.visibility = "visible";
+    popup.style.display = "block";
+    // popup.disabled = false;
+
+
+
+    // popup.show()
+    // popup = document.createElement("div");
+    // popup.document.write("<h2>Congratulations!</h2>")
+    // popup.document.write("<p>You completed Level 1 of Logical Fallacies: Appealing to the mind. Ready for the next level?</p>")
+
+
+    document.querySelector("#close").addEventListener("click", function(){
+        document.querySelector(".finishPopup").style.display = "none";
+    });
+    
+}
+

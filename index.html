@@ -7,14 +7,21 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap" rel="stylesheet">
         <title>Memory Game: Logical Fallacy</title>
-        <h1 id="heading">Match the Fallacies</h1>
+        <h1 id="heading">1000 Ways to Lie</h1>
         <link rel="stylesheet" href="cards.css">
         <script src="cards.js"></script>
     </head>
 
     <body>
         <h2>Errors: <span id="errors">0</span></h2>
-        <div id="board">
+        <div id="board" class="blur">
+        </div>
+        <div class="finishPopup"> 
+            <button id="close">&times;</button>
+            <h2>Congratulations!</h2>
+            <p>You completed Level 1 of Logical Fallacies: Appealing to the mind. Ready for the next level?
+            </p>
+            <a href="#">Let's Go!</a>
         </div>
     </body>
 </html>
