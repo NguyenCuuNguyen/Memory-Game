@@ -1,0 +1,101 @@
+body {
+  background: url("../img/bg/bg28.png");
+  background-size: cover;
+  font-family: 'IBM Plex Mono', monospace;
+  color:#C06C84;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#errors{
+  text-align: left;
+}
+
+#board {
+  height: 895px;
+  width: 975px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #C06C84;
+  border: 10px solid #6C5B7B;
+  border-radius: 8px;
+}
+
+/*  pointer-events: and user-select: to continue bluring, only stops when X out of popup*/
+#board.blur.active {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+
+#heading{
+  color: #05386B  !important;
+  text-align: center !important; 
+  font-weight: bold;
+  font-size:95px;
+}
+.card {
+  height: 218px;
+  width: 190px;
+  margin: 2.5px;
+  border-radius: 8px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* display:none to hide the div  */  
+  /* display:none;   opacity: 0;*/
+.finishPopup {
+  visibility: hidden;
+  background-color: #ffffff;
+  width: 450px;
+  padding: 30px 40px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 75%;
+  border-radius: 8px;
+  box-shadow: 0 5px 30px rgba(0,0,0,.30);
+
+}
+
+/* #finishPopup.active {
+  visibility: visible;
+  opacity: 1;
+
+} */
+
+/* #finishPopup.hidden {
+  visibility: hidden;
+  opacity: 0;
+
+} */
+
+.finishPopup button {
+  display: block;
+  margin: 0 0 20px auto;
+  background-color: transparent;
+  font-size: 30px;
+  color: lightgray;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.finishPopup p {
+  font-size: 14px;
+  text-align: justify;
+  margin: 20px 0;
+}
+
+a {
+  display: block;
+  width: 150px;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  background-color:darkblue;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 0;
+}

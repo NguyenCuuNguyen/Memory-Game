@@ -1,26 +1,26 @@
 
 var errors = 0;
 var cardSet = [
-    "./img/anon",
-    "./img/authority",
-    "./img/common",
-    "./img/doubt",
-    "./img/igno",
-    "./img/money",
-    "./img/novel",
-    "./img/pop",
-    "./img/prob",
-    "./img/tradition",
-    "./img/_anon",
-    "./img/_authority",
-    "./img/_common",
-    "./img/_doubt",
-    "./img/_igno",
-    "./img/_money",
-    "./img/_novel",
-    "./img/_pop",
-    "./img/_prob",
-    "./img/_tradition"
+    "./img/mind/anon",
+    "./img/mind/authority",
+    "./img/mind/common",
+    "./img/mind/doubt",
+    "./img/mind/igno",
+    "./img/mind/money",
+    "./img/mind/novel",
+    "./img/mind/pop",
+    "./img/mind/prob",
+    "./img/mind/tradition",
+    "./img/mind/_anon",
+    "./img/mind/_authority",
+    "./img/mind/_common",
+    "./img/mind/_doubt",
+    "./img/mind/_igno",
+    "./img/mind/_money",
+    "./img/mind/_novel",
+    "./img/mind/_pop",
+    "./img/mind/_prob",
+    "./img/mind/_tradition"
 ]
 
 var cardSet;
@@ -124,9 +124,9 @@ function update() {
     console.log("card2Selected.src is: ", card2Selected.src);
     if (card1Selected.src.includes("_")){
         card1 = card1Selected.src.split("_")[1]
-        card2 = card2Selected.src.split("/")[4]
+        card2 = card2Selected.src.split("/")[5]
     }else {
-        card1 = card1Selected.src.split("/")[4]
+        card1 = card1Selected.src.split("/")[5]
         card2 = card2Selected.src.split("_")[1]
     }
 
@@ -157,14 +157,9 @@ function nextLevel(){
     console.log("popup", popup);
     popup.style.visibility = "visible";
     popup.style.display = "block";
-    // popup.disabled = false;
-
-
-
-    // popup.show()
-    // popup = document.createElement("div");
-    // popup.document.write("<h2>Congratulations!</h2>")
-    // popup.document.write("<p>You completed Level 1 of Logical Fallacies: Appealing to the mind. Ready for the next level?</p>")
+    
+    var blur = document.getElementsByClassName("blur")[0];
+    blur.classList.add("active");
 
 
     document.querySelector("#close").addEventListener("click", function(){

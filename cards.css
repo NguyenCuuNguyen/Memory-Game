@@ -1,10 +1,10 @@
 body {
-  background: url("./background.jpg");
+  background: url(".img/bg/background.jpg");
   background-size: cover;
   font-family: 'IBM Plex Mono', monospace;
   color:#C06C84;
   text-align: center;
-  
+  padding-bottom: 30px;
 }
 
 #errors{
@@ -22,11 +22,24 @@ body {
   border-radius: 8px;
 }
 
+h1 span { 
+  background-color: #ffffff;
+}
+
+/*  pointer-events: and user-select: to continue bluring, only stops when X out of popup*/
+#board.blur.active {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+
 #heading{
   color: #355C7D  !important;
   text-align: center !important; 
   font-weight: bold;
   font-size:95px;
+  display: inline-block !important;
+  width: fit-content;
 }
 .card {
   height: 218px;
