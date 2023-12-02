@@ -1,26 +1,26 @@
 
 var errors = 0;
 var cardSet = [
-    "../img/content/ad",
-    "../img/content/beg",
-    "../img/content/bias",
-    "../img/content/cherry",
-    "../img/content/false",
-    "../img/content/gen",
-    "../img/content/red",
-    "../img/content/slip",
-    "../img/content/unfalse",
-    "../img/content/vi",
-    "../img/content/_ad",
-    "../img/content/_beg",
-    "../img/content/_bias",
-    "../img/content/_cherry",
-    "../img/content/_false",
-    "../img/content/_gen",
-    "../img/content/_red",
-    "../img/content/_slip",
-    "../img/content/_unfalse",
-    "../img/content/_vi",
+    "../img/deduction/anec",
+    "../img/deduction/comp",
+    "../img/deduction/div",
+    "../img/deduction/gam",
+    "../img/deduction/gen",
+    "../img/deduction/jump",
+    "../img/deduction/mid",
+    "../img/deduction/perf",
+    "../img/deduction/spot",
+    "../img/deduction/unmid",
+    "../img/deduction/_anec",
+    "../img/deduction/_comp",
+    "../img/deduction/_div",
+    "../img/deduction/_gam",
+    "../img/deduction/_gen",
+    "../img/deduction/_jump",
+    "../img/deduction/_mid",
+    "../img/deduction/_perf",
+    "../img/deduction/_spot",
+    "../img/deduction/_unmid",
 ]
 
 var cardSet;
@@ -36,8 +36,6 @@ window.onload = function() {
     shuffleCards();
     startGame();
 }
-
-
 
 
 function shuffleCards() {

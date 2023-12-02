@@ -1,8 +1,8 @@
 body {
-  background: url("../img/bg/bg28.png");
+  background: url("../img/bg/bg15.jpg");
   background-size: cover;
   font-family: 'IBM Plex Mono', monospace;
-  color:#C06C84;
+  color:#ffffff;
   text-align: center;
   padding-bottom: 30px;
 }
@@ -30,7 +30,7 @@ body {
 }
 
 #heading{
-  color: #05386B  !important;
+  color: #ffffff  !important;
   text-align: center !important; 
   font-weight: bold;
   font-size:95px;
